@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+body{
+  background-color: #EEEEEE;
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.visible{
+  display: block !important;
+}
+
+.container-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .container{
+    max-width: 1120px;
+    width: 1120px;
+    min-width: 300px;
+    margin: 0 25px;
+  }
+}
+
+.cont-bord{
+
+}
