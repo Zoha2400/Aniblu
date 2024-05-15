@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className=" h-screen bg-zinc-900">
       <Header />
 
       <Content />
