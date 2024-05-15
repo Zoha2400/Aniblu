@@ -4,7 +4,7 @@ import Home from "./Home/Home";
 
 function Content() {
   return (
-    <div className="Content-wrapper container-wrapper">
+    <div className="Content-wrapper container-wrapper w-full overflow-hidden mt-5">
       <div className="Content">
         <Home />
       </div>
