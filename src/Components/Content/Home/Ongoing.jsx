@@ -67,17 +67,17 @@ function Ongoing() {
   // component
   const cards = ongoingHome.map((i) => {
     return (
-      <SwiperSlide className="flex h-80 items-center overflow-hidden border-box p-5">
-        <div className="w-full h-64 bg-bg46 rounded-xl">
+      <SwiperSlide className="flex justify-center items-end overflow-hidden border-box">
+        <div className="w-full h-72 bg-gradient-to-t from-zinc-900 to-transparent mt-40 pb-4">
           <OngItem
-            imgage={i.images.webp.image_url}
-            descript={i.title}
-            rate={i.score}
+            imgage={i.attributes.posterImage.medium}
+            descript={i.attributes.titles.en}
+            rate={i.attributes.averageRating}
           />
         </div>
         <img
-          src={i.images.webp.image_url}
-          className="h-auto w-full absolute left-0 blur-md mt-4 mb-4 top-0 -z-10"
+          src={i.attributes.coverImage.small}
+          className="h-auto w-full absolute left-0  mt-4 mb-4 top-0 -z-10"
         ></img>
       </SwiperSlide>
     );
@@ -88,16 +88,13 @@ function Ongoing() {
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
+        spaceBetween={0}
         slidesPerView={"auto"}
-        navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
       >
         {cards}
-        ...
       </Swiper>
       {/* <button ref={perpag} className="pervous pag">
         {"<"}
