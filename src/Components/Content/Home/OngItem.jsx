@@ -8,8 +8,8 @@ function OngItem(props) {
           className="bg-black w-auto h-64 border-neutral-950 border-solid border-4"
         />
       </div>
-      <p className="text-white text-3xl">{props.descript}</p>
-      <span className="text-5xl">{props.name}</span>
+      <p className="text-white text-3xl bg-red-500">{props.descript}</p>
+      {/* <span className="text-md w-80">{props.synopsis}</span> */}
     </div>
   );
 }

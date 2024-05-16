@@ -67,11 +67,12 @@ function Ongoing() {
   // component
   const cards = ongoingHome.map((i) => {
     return (
-      <SwiperSlide className="flex justify-center items-end overflow-hidden border-box">
+      <SwiperSlide className="flex justify-center items-end overflow-hidden">
         <div className="w-full h-76 mt-40 pb-4 z-20">
           <OngItem
             imgage={i.attributes.posterImage.medium}
             descript={i.attributes.titles.en}
+            synopsis={i.attributes.synopsis}
             rate={i.attributes.averageRating}
           />
         </div>
@@ -79,7 +80,7 @@ function Ongoing() {
         <div className=" bg-gradient-to-l from-zinc-900 via-transparent to-zinc-900  z-10 absolute w-full h-full"></div>
         <img
           src={i.attributes.coverImage.small}
-          className=" h-full w-auto absolute left-0 mb-4 top-0 -z-10"
+          className=" h-auto w-full absolute left-0 mb-4 top-0 -z-10"
         />
       </SwiperSlide>
     );
