@@ -68,17 +68,19 @@ function Ongoing() {
   const cards = ongoingHome.map((i) => {
     return (
       <SwiperSlide className="flex justify-center items-end overflow-hidden border-box">
-        <div className="w-full h-72 bg-gradient-to-t from-zinc-900 to-transparent mt-40 pb-4">
+        <div className="w-full h-76 mt-40 pb-4 z-20">
           <OngItem
             imgage={i.attributes.posterImage.medium}
             descript={i.attributes.titles.en}
             rate={i.attributes.averageRating}
           />
         </div>
+        <div className=" bg-gradient-to-t from-zinc-900 via-transparent to-zinc-900 z-10 absolute w-full h-full"></div>
+        <div className=" bg-gradient-to-l from-zinc-900 via-transparent to-zinc-900  z-10 absolute w-full h-full"></div>
         <img
           src={i.attributes.coverImage.small}
-          className="h-auto w-full absolute left-0  mt-4 mb-4 top-0 -z-10"
-        ></img>
+          className=" h-full w-auto absolute left-0 mb-4 top-0 -z-10"
+        />
       </SwiperSlide>
     );
   });
